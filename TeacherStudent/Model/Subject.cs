@@ -2,16 +2,18 @@
 {
     public class Subject
     {
-        public int mark;
+        public double mark;
+        public string name;
 
         public Subject()
         {
 
         }
 
-        public Subject(int mark)
+        public Subject(double mark, string name)
         {
             this.mark = mark;
+            this.name = name;   
         }
     }
 }

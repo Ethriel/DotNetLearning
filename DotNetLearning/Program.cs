@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TeacherStudent.Model;
 
 namespace DotNetLearning
 {
@@ -6,7 +6,7 @@ namespace DotNetLearning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
