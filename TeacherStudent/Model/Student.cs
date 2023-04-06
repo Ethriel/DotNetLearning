@@ -5,37 +5,33 @@ namespace TeacherStudent.Model
 {
     public class Student
     {
-        public string FirstName;
-        public string LastName;
-        public ICollection<Subject> Subjects;
+        private string _firstName;
+        private string _lastName;
+        private ICollection<Subject> _subjects;
+
+        public string FirstName { get => _firstName; set => _firstName = value; }
+
+        public string LastName { get => _lastName; set => _lastName = value; }
+
+        public ICollection<Subject> Subjects { get => _subjects; set => _subjects = value; }
+
+        public double MeansMarks { get => _subjects.Sum(sj => sj.Mark) / _subjects.Count; }
 
         public Student()
         {
-            Subjects = new List<Subject>();
+            _subjects = new List<Subject>();
         }
 
         public Student(string firstName, string lastName)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Subjects = new List<Subject>();
+            _firstName = firstName;
+            _lastName = lastName;
+            _subjects = new List<Subject>();
         }
 
         override public string ToString()
         {
-            return $" FirstName: {FirstName}, LastName: {LastName}";
-        }
-
-        public double GetMeanMarks()
-        {
-            //var result = 0.0;
-            //var subjectsSum = Subjects.Sum(sj => sj.mark);
-            //var subjectMarksMean = subjectsSum / Subjects.Count;
-            //result = subjectMarksMean;
-
-            //return result;
-
-            return Subjects.Sum(sj => sj.mark) / Subjects.Count;
+            return $" FirstName: {_firstName}, LastName: {_lastName}";
         }
     }
 }

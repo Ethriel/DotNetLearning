@@ -5,21 +5,13 @@ namespace TeacherStudent.Model
 {
     public class Teacher
     {
-        public ICollection<Student> Students;
-        public double Rate;
+        private ICollection<Student> _students; // field
+        public ICollection<Student> Students { get => _students; set => _students = value; } // Property
+        public double Rate { get => Students.Sum(st => st.MeansMarks); } // Calculated Property
 
         public Teacher()
         {
-            Students = new List<Student>();
-        }
-
-        public double GetRate()
-        {
-            //Rate = Students.Sum(st => st.GetMeanMarks());
-
-            //return Rate;
-
-            return Students.Sum(st => st.GetMeanMarks());
+            _students = new List<Student>();
         }
     }
 }
