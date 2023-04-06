@@ -20,6 +20,7 @@ namespace TeacherStudent.Model
         public Student()
         {
             _subjects = new List<Subject>();
+            AddBasicSubjects();
         }
 
         public Student(string firstName, string lastName)
@@ -27,11 +28,47 @@ namespace TeacherStudent.Model
             _firstName = firstName;
             _lastName = lastName;
             _subjects = new List<Subject>();
+            AddBasicSubjects();
         }
 
         override public string ToString()
         {
             return $" FirstName: {_firstName}, LastName: {_lastName}";
+        }
+
+        public void AddBasicSubjects()
+        {
+            _subjects.Add
+                (new Subject
+                {
+                    Mark = 1,
+                    Name = "first 1"
+                }
+                );
+            _subjects.Add
+                (new Subject
+                {
+                    Mark = 2,
+                    Name = "second 2"
+                }
+                );
+        }
+
+        public void AddSubject(string name, double mark)
+        {
+            _subjects.Add
+                (
+                new Subject
+                {
+                    Mark = mark,
+                    Name = name
+                }
+                );
+        }
+
+        public void AddSubject(Subject subject)
+        {
+            _subjects.Add(subject);
         }
     }
 }
