@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace TeacherStudent.Model
@@ -31,6 +33,11 @@ namespace TeacherStudent.Model
         public override string ToString()
         {
             return $"Name: {Name}, Rate: {Rate}";
+        }
+
+        public void Dispose()
+        {
+            _students = null;
         }
     }
 }

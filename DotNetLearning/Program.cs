@@ -25,7 +25,7 @@ namespace DotNetLearning
             {
                 Name = "T4",
             };
-            var teachers = new List<Teacher>() { tch1, tch2, tch3, tch4 };
+            ICollection<Teacher> teachers = new List<Teacher>() { tch1, tch2, tch3, tch4 };
             var iteration = 1;
             foreach (var teacher in teachers)
             {
@@ -49,13 +49,59 @@ namespace DotNetLearning
             {
                 Console.WriteLine(teacher);
             }
-
             var filteredTeachers = teachers.OrderByDescending(t => t.Rate);
             Console.WriteLine("FILTERED");
             foreach (var teacher in filteredTeachers)
             {
                 Console.WriteLine(teacher);
             }
+
+            teachers.Add(
+                new Teacher
+                {
+                    Name = "I was added last",
+                    Students = new List<Student>()
+                    {
+                        new Student()
+                        {
+                            FirstName = "Best 1",
+                            LastName = "Student",
+                             Subjects = new List<Subject>()
+                             {
+                                 new Subject()
+                                 {
+                                     Mark = 1,
+                                     Name = "Sbj 1"
+                                 },
+                                 new Subject()
+                                 {
+                                     Mark = 2,
+                                     Name = "Sbj 2"
+                                 }
+                             }
+                        },
+                        new Student()
+                        {
+                            FirstName = "Best 2",
+                            LastName = "Student",
+                             Subjects = new List<Subject>()
+                             {
+                                 new Subject()
+                                 {
+                                     Mark = 1,
+                                     Name = "Sbj 1"
+                                 },
+                                 new Subject()
+                                 {
+                                     Mark = 2,
+                                     Name = "Sbj 2"
+                                 }
+                             }
+                        }
+                    }
+                });
+
+            Console.WriteLine(teachers.ElementAt(0));
         }
     }
 }
