@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace TeacherStudent.Model
@@ -19,6 +17,12 @@ namespace TeacherStudent.Model
             AddBasicStudents();
         }
 
+        public void AddStudentToTeacher(Student student)
+        {
+            _students ??= new List<Student>();
+            _students.Add(student);
+        }
+
         public void AddBasicStudents()
         {
             Students.Add
@@ -32,7 +36,7 @@ namespace TeacherStudent.Model
 
         public override string ToString()
         {
-            return $"Name: {Name}, Rate: {Rate}";
+            return $"Teacher. Name: {Name}, Rate: {Rate}";
         }
 
         public void Dispose()

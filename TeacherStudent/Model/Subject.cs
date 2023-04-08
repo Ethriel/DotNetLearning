@@ -18,5 +18,10 @@
             this._mark = mark;
             this._name = name;
         }
+
+        public override string ToString()
+        {
+            return $"Subject. Name: {Name}, Mark: {Mark}";
+        }
     }
 }

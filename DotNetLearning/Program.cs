@@ -25,6 +25,7 @@ namespace DotNetLearning
             {
                 Name = "T4",
             };
+
             ICollection<Teacher> teachers = new List<Teacher>() { tch1, tch2, tch3, tch4 };
             var iteration = 1;
             foreach (var teacher in teachers)
@@ -56,6 +57,29 @@ namespace DotNetLearning
                 Console.WriteLine(teacher);
             }
 
+            // Magic
+            teachers.Add(
+                new Teacher
+                {
+                    Name = "aboba"
+                });
+            teachers.Last().AddStudentToTeacher(new Student
+            {
+                FirstName = "Last student 1",
+                LastName = "Last student 1"
+            });
+            teachers.Last().Students.Last().AddSubjectToStudent(new Subject
+            {
+                Mark = 1,
+                Name = "Last subject"
+            });
+
+            Console.WriteLine("LAST TEACHER DEMO");
+            Console.WriteLine($"TEACHER {teachers.Last()}");
+            Console.WriteLine($"LAST TEACHER, LAST STUDENT {teachers.Last().Students.Last()}");
+            Console.WriteLine($"LAST TEACHER, LAST STUDENT, LAST SUBJECT {teachers.Last().Students.Last().Subjects.Last()}");
+
+            // Not magic
             teachers.Add(
                 new Teacher
                 {
@@ -100,6 +124,8 @@ namespace DotNetLearning
                         }
                     }
                 });
+
+
 
             Console.WriteLine(teachers.ElementAt(0));
         }

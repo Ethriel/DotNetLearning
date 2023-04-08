@@ -33,7 +33,13 @@ namespace TeacherStudent.Model
 
         override public string ToString()
         {
-            return $" FirstName: {_firstName}, LastName: {_lastName}";
+            return $"Student. FirstName: {_firstName}, LastName: {_lastName}";
+        }
+
+        public void AddSubjectToStudent(Subject subject)
+        {
+            _subjects ??= new List<Subject>();
+            _subjects.Add(subject);
         }
 
         public void AddBasicSubjects()
