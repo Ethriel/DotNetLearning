@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LessonFourInterfacesBasics.Model.Abstraction;
+using LessonFourInterfacesBasics.Model.Implementation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TeacherStudent.Model;
@@ -8,6 +10,11 @@ namespace DotNetLearning
     public class Program
     {
         static void Main(string[] args)
+        {
+            LessonFourDemo();
+        }
+
+        static void TeachersStudentsLesson()
         {
             var tch1 = new Teacher
             {
@@ -124,6 +131,24 @@ namespace DotNetLearning
                         }
                     }
                 });
+        }
+
+        static void LessonFourDemo()
+        {
+            ICollection<IPerson> people = new List<IPerson>();
+            IPerson oleh = new Oleh { FirstName = "Oleh", Age = 18 };
+            IPerson pavlo = new Pavlo { FirstName = "Pavlo", Age = 18 };
+            IPerson danik = new Danik { FirstName = "Danik", Age = 18 };
+            IPerson vova = new Vova { FirstName = "Vova", Age = 30 };
+            people.Add(oleh);
+            people.Add(pavlo);
+            people.Add(danik);
+            people.Add(vova);
+
+            foreach (var person in people)
+            {
+                person.DoJob();
+            }
         }
     }
 }

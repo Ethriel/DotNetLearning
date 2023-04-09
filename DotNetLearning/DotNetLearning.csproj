@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LessonFourInterfacesBasics\LessonFourInterfacesBasics.csproj" />
     <ProjectReference Include="..\TeacherStudent\TeacherStudent.csproj" />
   </ItemGroup>
 
