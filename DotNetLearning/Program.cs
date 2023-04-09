@@ -124,10 +124,6 @@ namespace DotNetLearning
                         }
                     }
                 });
-
-
-
-            Console.WriteLine(teachers.ElementAt(0));
         }
     }
 }
