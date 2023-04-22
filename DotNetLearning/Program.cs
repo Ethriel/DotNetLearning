@@ -3,6 +3,7 @@ using LessonFive.InterfacesInteraction.Abstraction.ChildInterfaces;
 using LessonFive.InterfacesInteraction.Implementation;
 using LessonFourInterfacesBasics.Model.Abstraction;
 using LessonFourInterfacesBasics.Model.Implementation;
+using LessonSix.FileWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace DotNetLearning
         {
             //LessonFourMetalWorkers();
             //bool? a = null;
+            var fileWorkBase = new FileWorkBase();
+            fileWorkBase.BinaryWrite("test_text_v2.txt", "♂ Right version ♂");
         }
 
         static void TeachersStudentsLesson()
