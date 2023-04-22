@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetLearning", "DotNetLea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeacherStudent", "TeacherStudent\TeacherStudent.csproj", "{F54DC714-C0EE-44A3-8187-A4E21930BEBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonFourInterfacesBasics", "LessonFourInterfacesBasics\LessonFourInterfacesBasics.csproj", "{AE87D00F-D080-4D5F-8040-14903F6F5992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonFourInterfacesBasics", "LessonFourInterfacesBasics\LessonFourInterfacesBasics.csproj", "{AE87D00F-D080-4D5F-8040-14903F6F5992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonFive", "LessonFive\LessonFive.csproj", "{3AABB12F-802A-4764-B801-EBCF818F38DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AE87D00F-D080-4D5F-8040-14903F6F5992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE87D00F-D080-4D5F-8040-14903F6F5992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE87D00F-D080-4D5F-8040-14903F6F5992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AABB12F-802A-4764-B801-EBCF818F38DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AABB12F-802A-4764-B801-EBCF818F38DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AABB12F-802A-4764-B801-EBCF818F38DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AABB12F-802A-4764-B801-EBCF818F38DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
