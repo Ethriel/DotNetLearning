@@ -1,9 +1,5 @@
-﻿using LessonFive.InterfacesInteraction.Abstraction.BaseInterfaces;
-using LessonFive.InterfacesInteraction.Abstraction.ChildInterfaces;
-using LessonFive.InterfacesInteraction.Implementation;
-using LessonFourInterfacesBasics.Model.Abstraction;
+﻿using LessonFourInterfacesBasics.Model.Abstraction;
 using LessonFourInterfacesBasics.Model.Implementation;
-using LessonSix.FileWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +11,7 @@ namespace DotNetLearning
     {
         static void Main(string[] args)
         {
-            
+
         }
 
         static void TeachersStudentsLesson()
@@ -154,130 +150,5 @@ namespace DotNetLearning
                 person.DoJob();
             }
         }
-
-        static void ProcessMetalForming()
-        {
-            #region Base_Implementation
-            //var metalWorker = new MetalWorker();
-            //metalWorker.TemperaturePrepare();
-            //metalWorker.LoadMetal();
-            //metalWorker.MeltMetal();
-            //metalWorker.DeformMetal();
-            #endregion
-
-            #region Extended_Implementation
-            //IMetalWorkFirst metalWorker = new MetalWorker();
-            //metalWorker.TemperaturePrepare();
-            //(metalWorker as IMetalWorkSecond).LoadMetal();
-            //(metalWorker as IMetalWorkThird).MeltMetal();
-            //(metalWorker as IMetalWorkFourth).DeformMetal();
-            #endregion
-        }
-
-        static void LessonFourFirstMetalWorker()
-        {
-            Console.WriteLine("FIRST WORKER");
-            IMetalWorkFourth worker = new MetalWorker();
-            worker.TemperaturePrepare();
-            worker.LoadMetal();
-            worker.MeltMetal();
-            worker.DeformMetal();
-        }
-
-        static void LessonFourSecondtMetalWorker()
-        {
-            Console.WriteLine("SECOND WORKER");
-            IMetalWorkFourth worker = new MetalWorkerSecond();
-            worker.TemperaturePrepare();
-            worker.LoadMetal();
-            worker.MeltMetal();
-            worker.DeformMetal();
-        }
-        #region
-        static void LessonFourMetalWorkers()
-        {
-            Console.WriteLine("FIRST");
-
-            ICollection<IMetalWorkFirst> metalWorkersFirst = new List<IMetalWorkFirst>();
-            metalWorkersFirst.Add(GetMetalWorkerFourthFirst());
-            metalWorkersFirst.Add(GetMetalWorkerThirdFirst());
-            metalWorkersFirst.Add(GetMetalWorkerSecondFirst());
-            metalWorkersFirst.Add(GetMetalWorkerFirstFirst());
-
-            foreach (var ml in metalWorkersFirst)
-            {
-                Console.WriteLine(ml);
-            }
-
-            Console.WriteLine("SECOND");
-
-            ICollection<IMetalWorkFirst> metalWorkersSecond = new List<IMetalWorkFirst>();
-            metalWorkersSecond.Add(GetMetalWorkerFourthSecond());
-            metalWorkersSecond.Add(GetMetalWorkerThirdSecond());
-            metalWorkersSecond.Add(GetMetalWorkerSecondSecond());
-            metalWorkersSecond.Add(GetMetalWorkerSecondFirst());
-
-            foreach (var ml in metalWorkersSecond)
-            {
-                Console.WriteLine(ml);
-            }
-        }
-
-        static IMetalWorkFourth GetMetalWorkerFourthFirst()
-        {
-            IMetalWorkFourth metalWorker = new MetalWorker();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkFourth GetMetalWorkerFourthSecond()
-        {
-            IMetalWorkFourth metalWorker = new MetalWorkerSecond();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkThird GetMetalWorkerThirdFirst()
-        {
-            IMetalWorkThird metalWorker = new MetalWorker();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkThird GetMetalWorkerThirdSecond()
-        {
-            IMetalWorkThird metalWorker = new MetalWorkerSecond();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkSecond GetMetalWorkerSecondFirst()
-        {
-            IMetalWorkSecond metalWorker = new MetalWorker();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkSecond GetMetalWorkerSecondSecond()
-        {
-            IMetalWorkSecond metalWorker = new MetalWorkerSecond();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkFirst GetMetalWorkerFirstFirst()
-        {
-            IMetalWorkFourth metalWorker = new MetalWorker();
-
-            return metalWorker;
-        }
-
-        static IMetalWorkFirst GetMetalWorkerFirstSecond()
-        {
-            IMetalWorkFirst metalWorker = new MetalWorkerSecond();
-
-            return metalWorker;
-        }
-        #endregion
     }
 }
