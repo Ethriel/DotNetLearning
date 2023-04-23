@@ -6,13 +6,13 @@ namespace LessonSix.FileWork
 {
     public class FileWorkBase
     {
-        public string BinaryRead()
+        public string BinaryRead(string readFilePath)
         {
             var bytes = new byte[byte.MaxValue];
             var bytesCount = default(int);
             var stringResult = default(string);
             var stringBuilder = new StringBuilder();
-            using (var stream = new FileStream("test_text_v1.txt", FileMode.Open))
+            using (var stream = new FileStream(readFilePath, FileMode.Open))
             {
                 while ((bytesCount = stream.Read(bytes, 0, bytes.Length)) > 0)
                 {
