@@ -24,15 +24,24 @@ namespace LessonSix.FileWork
             return stringBuilder.ToString();
         }
 
-        public void BinaryWrite(string inputFilePath, string inputData)
+        /// <summary>
+        /// Write data
+        /// <paramref name="inputData"/>
+        /// to the file specified by the filepath
+        /// <paramref name="outputFilePath"/>
+        /// </summary>
+        /// <param name="outputFilePath"></param>
+        /// <param name="inputData"></param>
+        public void BinaryWrite(string outputFilePath, string inputData)
         {
+            // Get bytes of data to be stored
             var bytesData = Encoding.UTF8.GetBytes(inputData);
-            using (var stream = new FileStream(inputFilePath, FileMode.Open))
+
+            // Write bytes to the file and save
+            using (var stream = new FileStream(outputFilePath, FileMode.OpenOrCreate))
             {
                 stream.Write(bytesData, 0, bytesData.Length);
             }
-
-            Console.WriteLine(Encoding.UTF8.GetString(bytesData));
         }
     }
 }

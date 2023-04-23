@@ -15,10 +15,7 @@ namespace DotNetLearning
     {
         static void Main(string[] args)
         {
-            //LessonFourMetalWorkers();
-            //bool? a = null;
-            var fileWorkBase = new FileWorkBase();
-            fileWorkBase.BinaryWrite("test_text_v2.txt", "♂ Right version ♂");
+            
         }
 
         static void TeachersStudentsLesson()
