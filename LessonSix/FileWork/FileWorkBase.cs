@@ -8,15 +8,17 @@ namespace LessonSix.FileWork
     {
         public string BinaryRead(string readFilePath)
         {
-            var bytes = new byte[byte.MaxValue];
+            var fileBytes = new byte[byte.MaxValue];
             var bytesCount = default(int);
             var stringResult = default(string);
             var stringBuilder = new StringBuilder();
+            // var strResult = string.Empty;
             using (var stream = new FileStream(readFilePath, FileMode.Open))
             {
-                while ((bytesCount = stream.Read(bytes, 0, bytes.Length)) > 0)
+                while ((bytesCount = stream.Read(fileBytes, 0, fileBytes.Length)) > 0)
                 {
-                    stringResult = Encoding.UTF8.GetString(bytes);
+                    // strResult += Encoding.UTF8.GetString(fileBytes);
+                    stringResult = Encoding.UTF8.GetString(fileBytes);
                     stringBuilder.Append(stringResult);
                 }
             }
