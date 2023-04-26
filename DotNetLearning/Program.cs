@@ -1,9 +1,9 @@
 ﻿using LessonFourInterfacesBasics.Model.Abstraction;
 using LessonFourInterfacesBasics.Model.Implementation;
 using LessonSix.FileWork;
-using Microsoft.CSharp.RuntimeBinder;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.Linq;
 using TeacherStudent.Model;
 
@@ -13,7 +13,7 @@ namespace DotNetLearning
     {
         static void Main(string[] args)
         {
-           
+
         }
 
         static void TeachersStudentsLesson()
