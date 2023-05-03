@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LessonEight\LessonEight.csproj" />
     <ProjectReference Include="..\LessonFive\LessonFive.csproj" />
     <ProjectReference Include="..\LessonFourInterfacesBasics\LessonFourInterfacesBasics.csproj" />
     <ProjectReference Include="..\LessonSix\LessonSix.csproj" />

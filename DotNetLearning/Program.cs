@@ -1,4 +1,5 @@
-﻿using LessonFourInterfacesBasics.Model.Abstraction;
+﻿using LessonEight.Serialization;
+using LessonFourInterfacesBasics.Model.Abstraction;
 using LessonFourInterfacesBasics.Model.Implementation;
 using LessonSix.FileWork;
 using System;
@@ -13,7 +14,11 @@ namespace DotNetLearning
     {
         static void Main(string[] args)
         {
-
+            var serializationClass = new SerializationClass();
+            var teacher = new Teacher();
+            var serializedTeacher = serializationClass.SerializeObject(teacher);
+            var teacher2 = serializationClass.DeSerializeObject(serializedTeacher);
+            Console.WriteLine(teacher2);
         }
 
         static void TeachersStudentsLesson()
